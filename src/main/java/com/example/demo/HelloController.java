@@ -14,4 +14,17 @@ public class HelloController {
         return "hello,this is my first spring-boot!";
     }
 
+
+    /**
+     * springBoot默认使用的json解析框架是json
+     * @return
+     */
+    @RequestMapping("/getDemo")
+    public Demo getDemo(){
+        Demo demo = new Demo();
+        demo.setId(1);
+        demo.setName("张三");
+        return demo;
+    }
+
 }
