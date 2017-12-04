@@ -22,4 +22,9 @@ public class TemplatesController {
         map.put("name","jack");
         return "hello";
     }
+
+    @RequestMapping("/helloFtl")
+    public String helloFtl(){
+        return "helloFtl";
+    }
 }
