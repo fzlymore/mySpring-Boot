@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.web.HttpMessageConverters;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.converter.HttpMessageConverter;
 
-@SpringBootApplication()//exclude={DataSourceAutoConfiguration.class,HibernateJpaAutoConfiguration.class}
+@SpringBootApplication()//exclude={DataSourceAutoConfiguration.class,HibernateJpaAutoConfiguration.class} 一开始没有数据库，可以用这块代码排除报错
 public class SpringBootHelloApplication {
 
 	/**
