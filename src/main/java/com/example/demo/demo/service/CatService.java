@@ -1,6 +1,7 @@
 package com.example.demo.demo.service;
 
 import com.example.demo.demo.bean.Cat;
+import com.example.demo.demo.dao.CatDao;
 import com.example.demo.demo.repository.Cat2Repository;
 import com.example.demo.demo.repository.CatRepository;
 import org.springframework.stereotype.Service;
@@ -19,6 +20,9 @@ public class CatService {
 
     @Resource
     private Cat2Repository cat2Repository;
+
+    @Resource
+    private CatDao catDao;
 
     @Transactional
     public void save(Cat cat){
@@ -41,5 +45,9 @@ public class CatService {
     }
     public Cat findMyCatName (String catName){
         return cat2Repository.findMyCatName(catName);
+    }
+
+    public Cat selectByName (String catName){
+        return catDao.selectByCatName(catName);
     }
 }
