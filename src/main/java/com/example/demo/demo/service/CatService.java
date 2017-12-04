@@ -1,6 +1,7 @@
 package com.example.demo.demo.service;
 
 import com.example.demo.demo.bean.Cat;
+import com.example.demo.demo.repository.Cat2Repository;
 import com.example.demo.demo.repository.CatRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -16,6 +17,9 @@ public class CatService {
     @Resource
     private CatRepository catRepository;
 
+    @Resource
+    private Cat2Repository cat2Repository;
+
     @Transactional
     public void save(Cat cat){
         catRepository.save(cat);
@@ -29,5 +33,13 @@ public class CatService {
     @Transactional
     public Iterable<Cat> getAll(){
      return catRepository.findAll();
+    }
+
+
+    public Cat findByCatName (String catName){
+         return cat2Repository.findByCatName(catName);
+    }
+    public Cat findMyCatName (String catName){
+        return cat2Repository.findMyCatName(catName);
     }
 }
