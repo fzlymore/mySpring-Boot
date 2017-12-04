@@ -1,0 +1,7 @@
+1.需要添加相关依赖pom
+2.在application.properties文件添加依赖信息
+3.创建一个实体类
+4.创建一个接口来继承CrudRepository
+5.创建一个service来执行crud的逻辑操作
+6.创建一个controller
+7代码测试
